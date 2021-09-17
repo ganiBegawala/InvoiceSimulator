@@ -1,4 +1,4 @@
-
+// This class is dedicated for Employees(Faculty and Staff) for storing there department
 public abstract class Employee extends Person{
 
 	public String department;
