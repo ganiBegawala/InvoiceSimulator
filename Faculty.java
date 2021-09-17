@@ -1,4 +1,4 @@
-
+// This class is dedicated for getters and setters for the faculty
 public class Faculty extends Employee {
 	
 	private String rank;
@@ -12,12 +12,10 @@ public class Faculty extends Employee {
 	}
 
 	public Faculty() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Faculty(String name, String stuId) {
 		super(name, stuId);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -31,9 +29,7 @@ public class Faculty extends Employee {
 		System.out.println(toString());
 		System.out.println("-------------------------------------------------------------");
 
-	}
-	
-	
-	}
+	}	
+}
 
 
