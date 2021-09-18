@@ -1,4 +1,4 @@
-
+// This class is for getters and setters for Staff which inherits from employee class
 public class Staff extends Employee{
 	private char status;
 	
@@ -16,7 +16,6 @@ public class Staff extends Employee{
 	}
 
 	public Staff() {
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
