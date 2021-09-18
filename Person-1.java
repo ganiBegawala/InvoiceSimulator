@@ -1,4 +1,4 @@
-
+// This class sets getters and setters for student, faculty and staff fot their name and ID number
 public abstract class Person {
 	 
 	public String name;
