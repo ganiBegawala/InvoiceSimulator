@@ -5,12 +5,14 @@ public class mainClass {
 	public static void main(String[] args) {
 		String option="";
 		char temp;
+		
 		Menu m= new Menu();
 		People p=new People();
+		
 		System.out.println("\t\t\t\t\t\t Welcome to my Personal Management Program");
 
 		do {
-			 option = m.mainMenu();
+		     option = m.mainMenu();
 			switch (option) {
 
 			case "1":p.addFaculty();
@@ -31,18 +33,18 @@ public class mainClass {
 
 
 				if(temp=='Y'||temp=='y') {
-
 					System.out.println("Report created! \nGoodbye!");
 					p.printReport();
 				}
 				else if(temp=='N'||temp=='n') {
-				System.out.println("Good Bye!");
+					System.out.println("Good Bye!");
 				}
 				break;
-			default: System.out.println("Invalid entry - Please try again");
+					
+				default: System.out.println("Invalid entry - Please try again");
 
-			}//end of switch
-		}while(!option.equalsIgnoreCase("7"));
+		  }
+		} while(!option.equalsIgnoreCase("7"));
+	}	
+
 }
-
-	}
