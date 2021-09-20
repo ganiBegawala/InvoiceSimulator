@@ -10,25 +10,21 @@ public class People {
 	public People(){
 		people = new Person[100];
 		for (int i = 0; i < 100; i++) {
-			people[i] = null;
-			
-			
-		}
+			people[i] = null;	
 	}
+}
 	File file=new File("report.txt");
 
-		//_________________________________________________________________Staff
+	//This function adds the Staff to the array by inheriting from their own class to obtain the correct parameters 
 	public void addStaff(){
 		int i;
 		i=getIndex();
 		
-		
 		System.out.println("Enter Staff info:");
-		people[i]=new Staff();
-		
+			people[i]=new Staff();
 		
 		System.out.print("Name of the staff member: ");
-		people[i].setName((new Scanner(System.in)).nextLine());	
+			people[i].setName((new Scanner(System.in)).nextLine());	
 		
 		boolean staffId;
 		do {
@@ -54,12 +50,12 @@ public class People {
 		}
 		while(staffId==false);
 		
-		
-		
 		System.out.print("Department: ");
 		((Employee) people[i]).setDepartment((new Scanner(System.in)).nextLine());	
+		
 		System.out.print("Status, Enter P for Part Time or Enter F for Full Time: ");
 		((Staff) people[i]).setStatus((new Scanner(System.in)).next().charAt(0));	
+		
 		System.out.println("\nStaff member added!");
 		
 		try {
@@ -77,8 +73,7 @@ public class People {
 			System.out.println("No file");
 		}
 		}
-
-	
+	// This fuction checks if a certain staff member exist in the array
 	public int searchStaff(){
 		int index=0;
 		String temp;
@@ -93,10 +88,13 @@ public class People {
 				}
 			}
 		}
-			return -1;
+		return -1;
 	}
+	
+	// This fuction acts as a wrapper function and then prints after checking a statement
 	public void printStaff() {
 		int index= searchStaff();
+		
 		if(index== -1) {
 			System.out.println("No Staff Matched!");
 		}
@@ -105,7 +103,7 @@ public class People {
 		}
 
 	}
-	//_________________________________________________________________Faculty
+	//This function adds the Faculty members by inheriting from their own class
 	public void addFaculty() {
 		int i;
 		i=getIndex();
@@ -128,7 +126,6 @@ public class People {
 				!Character.isDigit(people[i].getStuId().charAt(4)) || !Character.isDigit(people[i].getStuId().charAt(5)))
 			throw new MyException("Invalid ID format. Must be LetterLetterDigitDigitDigitDigit");
 		}
-		
 		catch(MyException obj){
 			obj.getId();
 			facultyId=false;
@@ -170,9 +167,7 @@ public class People {
 		}
 		
 		}
-
-	
-	
+	// This function searches for a faculty member 
 	public int searchFaculty(){
 		int index=0;
 		String temp;
@@ -187,8 +182,9 @@ public class People {
 				}
 			}
 		}
-			return -1;
-}
+		return -1;
+	  }
+	// This function is a wrapper function for the function above
 	public void printFaculty() {
 		int index= searchFaculty();
 		if(index== -1) {
@@ -199,7 +195,8 @@ public class People {
 		}
 
 	}
-	//_________________________________________________________________Faculty
+	
+	//
 	public void addStudent() {
 		int i;
 		i=getIndex();
@@ -317,6 +314,7 @@ public class People {
 		}
 	}
 	
+	// This function prints the invoice on a .txt file
 	public void printReport(){
 		String readLine;
 		System.out.println("Here is the Report:\n");
