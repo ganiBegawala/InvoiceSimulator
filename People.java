@@ -231,7 +231,7 @@ public class People {
 		}
 		while(studentId==false);
 
-	boolean checkGpa;
+		boolean checkGpa;
 		do {
 			 checkGpa=true;
 		
@@ -244,7 +244,7 @@ public class People {
 			 checkGpa= false;
 		}
 		}
-	while(checkGpa==false);
+		while(checkGpa==false);
 			
 			boolean checkCred;
 			do {
@@ -258,7 +258,7 @@ public class People {
 					System.out.println("You must enter a number....try again");
 					checkCred=false;
 				}
-			}
+			 }
 		while(checkCred==false);
 		System.out.println("\nStudent added!");
 
@@ -276,7 +276,8 @@ public class People {
 		catch(FileNotFoundException e){
 			System.out.println("No file");
 		}
-	}
+		}
+	
 	private int getIndex() {
 		int index=1;
 		
@@ -287,6 +288,7 @@ public class People {
 		return -1;
 		
 	}
+	// This function searches for a student and if they exist in the array
 	public int searchStudent() {
 		int index;
 		String temp;
@@ -303,6 +305,7 @@ public class People {
 		}
 			return -1;
 	}
+	// This function acts as a wrapper function for the above function
 	public void printStudent() {
 		int index=searchStudent();
 		
