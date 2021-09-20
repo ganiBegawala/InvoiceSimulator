@@ -1,3 +1,4 @@
+// This class gets and sets students gpa and credit hours
 public class Student extends Person{
 
 	private double gpa;
@@ -18,20 +19,18 @@ public class Student extends Person{
 	public Student() {
 		gpa=0;
 		credHours=0;
-
-		// TODO Auto-generated constructor stub
 	}
 	public Student(String name, String stuId) {
 		super(name, stuId);
-		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
 		return name +"\t\t"+ stuId +"\n"+"Credit Hours:"+credHours+" ($236.45/credit hour)"+"\nFees: $52\n";
 
 	}
+	
+	// This function calculates tuition cost for student depending upon their GPA
 	public void printCheck() {
-		
 		
 		System.out.println("Here is the tuition Invoice for "+ name+":\n");
 		System.out.println("-------------------------------------------------------------");
@@ -45,7 +44,6 @@ public class Student extends Person{
 			System.out.println("($0 discount applied)");
 		}
 		System.out.println("-------------------------------------------------------------");
-
 	}
 	
 }
